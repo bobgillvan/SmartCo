@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Log Details",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Log Details')/Hierarchies('Log Details')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Log Details.hierarchies/Log Details.json"
+	]
+}

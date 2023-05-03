@@ -1,0 +1,16 @@
+{
+	"@type":"Subset",
+	"Name":"Demo",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Actual')"
+		},
+		{
+			"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Forecast')"
+		},
+		{
+			"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Predictive')"
+		}
+	]
+}

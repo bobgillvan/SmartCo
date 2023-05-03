@@ -1,0 +1,13 @@
+{
+	"@type":"Process",
+	"Name":"Log - Reset Log Process",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"Log - Reset Log Process.ti",
+	"UIData":"CubeAction=1511€DataAction=1503€CubeLogChanges=0€",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":[],
+	"Variables":[]
+}

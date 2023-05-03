@@ -1,0 +1,102 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+vTest='Planning Analytics/TM1 Test User 01';
+
+Cub1='}ClientGroups';
+
+View1='zZero_Test';
+
+IF(ViewExists(Cub1,View1)=1);
+ViewDestroy(Cub1,View1);
+ENDIF;
+
+ViewCreate(Cub1,View1);
+
+#Skip Consolidated Cells (1 = Yes, 0 = No)
+ViewExtractSkipCalcsSet(Cub1,View1, 0);  
+#Skip Rule calculated values (1 = Yes, 0 = No)
+ViewExtractSkipRuleValuesSet(Cub1, View1, 0);
+#Skip Zero values (1 = Yes, 0 = No)
+ViewExtractSkipZeroesSet(Cub1,View1, 1);
+
+Dim1='}Clients';
+
+Sub1='zZero';
+
+IF(SubsetExists(Dim1,Sub1)=1,
+SubsetDeleteAllElements(Dim1,Sub1),
+SubsetCreate(Dim1,Sub1));
+
+SubsetElementInsert(Dim1,Sub1,vTest,1);
+
+ViewSubsetAssign(Cub1,View1,Dim1,Sub1);
+
+ViewZeroOut(Cub1,View1);
+
+IF(pDelete@='Yes');
+ProcessBreak;
+ENDIF;
+
+###################
+
+
+View1='zImpersonate';
+
+IF(ViewExists(Cub1,View1)=1);
+ViewDestroy(Cub1,View1);
+ENDIF;
+
+ViewCreate(Cub1,View1);
+
+#Skip Consolidated Cells (1 = Yes, 0 = No)
+ViewExtractSkipCalcsSet(Cub1,View1, 0);  
+#Skip Rule calculated values (1 = Yes, 0 = No)
+ViewExtractSkipRuleValuesSet(Cub1, View1, 0);
+#Skip Zero values (1 = Yes, 0 = No)
+ViewExtractSkipZeroesSet(Cub1,View1, 1);
+
+Dim1='}Clients';
+
+Sub1='zImpersonate';
+
+IF(SubsetExists(Dim1,Sub1)=1,
+SubsetDeleteAllElements(Dim1,Sub1),
+SubsetCreate(Dim1,Sub1));
+
+SubsetElementInsert(Dim1,Sub1,pImpersonate,1);
+
+ViewSubsetAssign(Cub1,View1,Dim1,Sub1);
+
+
+DatasourceNameForServer=Cub1;
+DataSourceType='VIEW';
+DatasourceCubeview=View1;
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+
+IF(CellIsUpdateable(Cub1,vTest,vGroup)=1);
+CellPutS(vGroup,Cub1,vTest,vGroup);
+#AssignClientToGroup(vTest,vGroup);
+ENDIF;
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+SecurityRefresh;
+#endregion

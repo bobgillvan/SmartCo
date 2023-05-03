@@ -1,0 +1,59 @@
+{
+	"@type":"Process",
+	"Name":"Util_Impersonate",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"Util_Impersonate.ti",
+	"UIData":"CubeAction=1511€DataAction=1503€CubeLogChanges=0€",
+	"VariablesUIData":
+	[
+		"VarType=32€ColType=827€",
+		"VarType=32€ColType=827€",
+		"VarType=32€ColType=827€"
+	],
+	"DataSource":
+	{
+		"Type":"TM1CubeView",
+		"dataSourceNameForClient":"}ClientGroups",
+		"dataSourceNameForServer":"}ClientGroups",
+		"view":"View1"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pDelete",
+			"Prompt":"Yes = Clears ALL access",
+			"Value":"",
+			"Type":"String"
+		},
+		{
+			"Name":"pImpersonate",
+			"Prompt":"Impersonate Who ?",
+			"Value":"Planning Analytics/William Elias",
+			"Type":"String"
+		}
+	],
+	"Variables":
+	[
+		{
+			"Name":"vClient",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vGroup",
+			"Type":"String",
+			"Position":2,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vAccess",
+			"Type":"String",
+			"Position":3,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

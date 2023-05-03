@@ -1,0 +1,19 @@
+{
+	"@type":"Hierarchy",
+	"Name":"State Owner",
+	"Elements":
+	[
+		{
+			"Name":"State",
+			"Type":"String"
+		},
+		{
+			"Name":"Owner",
+			"Type":"String"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"State Owner.subsets/All Members.json"
+	]
+}

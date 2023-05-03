@@ -1,0 +1,19 @@
+{
+	"@type":"Cube",
+	"Name":"Workflow Overview",
+	"Rules@Code.link":"Workflow Overview.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('organization')"
+		},
+		{
+			"@id":"Dimensions('State Owner')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Workflow Overview.views/All.json",
+		"Workflow Overview.views/Workflow Overview.json"
+	]
+}
